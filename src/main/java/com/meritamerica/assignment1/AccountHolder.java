@@ -13,27 +13,7 @@ public class AccountHolder {
 	private double savingsAccountOpeningBalance = 0;
 	
 	
-	public static void main(String args[]) {
-		
-		String firstName = "";
-		String middleName = "";
-		String lastName = "";
-		String ssn = "";
-		
-		AccountHolder client = new AccountHolder();
-		 firstName = client.setFirstName();
-		 middleName = client.setMiddleName();
-		 lastName = client.setLastName();
-		 ssn = client.setSSN();
-		
-		 
-		client = new AccountHolder(firstName,middleName,lastName,ssn,100.0,1000.0);
-		client.getFirstName();
-		client.getMiddleName();
-		client.getLastName();
-		client.getSSN();
-		
-	}
+	
 	
 	public AccountHolder(){
 		
@@ -95,8 +75,10 @@ public class AccountHolder {
 		
 		return ssn;	
 	}
+
+
 	
-	//CheckingAccount.getCheckingAccount();
+	
 	//SavingsAccount.getSavingsAccount();
 	//public String x.toString()
 
