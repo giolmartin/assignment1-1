@@ -1,30 +1,27 @@
 package com.meritamerica.assignment1;
 
-public class MeritAmericaBankApp {
+public class MeritAmericaBankApp  {
 
 	public static void main(String args[]) {
 		
-		String firstName = "";
-		String middleName = "";
-		String lastName = "";
-		String ssn = "";
+		String firstName = "John";
+		String middleName = "James";
+		String lastName = "Doe";
+		String ssn = "123-45-6789";
+		double checkingAccountOpeningBalance = -100;//switch to positive if you want to add balance, this was just to test the boolean deposit() in checkingAccount.java
+		double savingsAccountOpeningBalance = 1000;
 		
-		AccountHolder client = new AccountHolder();
-		 firstName = client.setFirstName();
-		 middleName = client.setMiddleName();
-		 lastName = client.setLastName();
-		 ssn = client.setSSN();
+		
+		//AccountHolder client = new AccountHolder();
+		 //System.out.print("First Name: ");
+		//firstName = client.setFirstName();
+		//middleName = client.setMiddleName();
+		//lastName = client.setLastName();
+		//ssn = client.setSSN();
 		
 		 
-		client = new AccountHolder(firstName,middleName,lastName,ssn,100.0,1000.0);
-		client.getFirstName();
-		client.getMiddleName();
-		client.getLastName();
-		client.getSSN();
-		CheckingAccount checkingAccount = new CheckingAccount(100);
-		System.out.println(checkingAccount.getBalance());
-		
-		
+		AccountHolder client = new AccountHolder(firstName,middleName,lastName,ssn,checkingAccountOpeningBalance,savingsAccountOpeningBalance);
+		System.out.println(client.toString());
 		
 	}
 }
