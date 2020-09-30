@@ -5,9 +5,9 @@ import java.math.*;
 
 public class CheckingAccount {
 	
-	Scanner input = new Scanner(System.in);
-	private double balance  = 0;
-	
+	private double balance  = 0;	
+	private double interestRate = 0;
+	private double fV = 0; 
 	/*
 	 * Here im still not sure where we need to do the math to deposit or withdraw. Is it on the boolean method or on the constructor? 
 	 * i kind of played around with the balances just to see if the amounts were being called and written. 
@@ -17,7 +17,6 @@ public class CheckingAccount {
 	}
 	
 	public double getBalance() {
-		
 		return balance;
 	}
 	
@@ -30,7 +29,7 @@ public class CheckingAccount {
 	}
 	
 	private boolean deposit(double amount) {
-		if (0 < amount) {
+		if (0 <= amount) {
 			this.balance = this.balance + amount;
 			return true;
 		} 	else {
