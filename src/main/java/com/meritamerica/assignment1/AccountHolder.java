@@ -1,7 +1,5 @@
 package com.meritamerica.assignment1;
 
-import java.util.Scanner;
-
 public class AccountHolder {
 
 	private String firstName = "";
