@@ -1,3 +1,9 @@
+/*
+ * File: AccountHolder.java 
+ * ----------------------------------
+ * Implements all given methods and returns the examples and tests correctly. 
+ * Still needs comments on methods, that will be next commit.
+ */
 package com.meritamerica.assignment1;
 
 public class AccountHolder {
@@ -87,7 +93,8 @@ public class AccountHolder {
 	
 	public SavingsAccount getSavingsAccount() {
 		SavingsAccount clientSavingsAccount = new SavingsAccount(savingsAccountOpeningBalance);
-		return clientSavingsAccount;
+		this.clientSavingsAccount = clientSavingsAccount;
+		return this.clientSavingsAccount;
 	}
 
 	
@@ -99,10 +106,5 @@ public class AccountHolder {
 		return client;
 	}
 	
-
-	
-	
-	//SavingsAccount getSavingsAccount();
-	//public String x.toString()
 
 }

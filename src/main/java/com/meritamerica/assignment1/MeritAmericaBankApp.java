@@ -3,8 +3,9 @@ package com.meritamerica.assignment1;
 public class MeritAmericaBankApp  {
 
 	public static void main(String args[]) {
+
 		
-		String firstName = "John";
+		  String firstName = "John";
 		String middleName = "James";
 		String lastName = "Doe";
 		String ssn = "123-45-6789";
@@ -22,5 +23,6 @@ public class MeritAmericaBankApp  {
 		System.out.println(client.getCheckingAccount().toString());
 		//System.out.println("Next Saving account future value");
 		//System.out.println(client.getSavingsAccount().futureValue(3));
+		 
 	}
 }

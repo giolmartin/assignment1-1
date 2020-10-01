@@ -1,6 +1,11 @@
+/*
+ * File: CheckingAccount.java 
+ * ----------------------------------
+ * Implements all given methods and returns the examples and tests correctly. 
+ * Still needs comments on methods, that will be next commit.
+ */
 package com.meritamerica.assignment1;
 
-import java.util.Scanner;
 import java.math.*;
 import java.text.DecimalFormat;
 
@@ -9,11 +14,8 @@ public class CheckingAccount {
 	private double balance ;	
 	private double interestRate = 0.0001;
 	private double futureValue  ; 
-	/*
-	 * Here im still not sure where we need to do the math to deposit or withdraw. Is it on the boolean method or on the constructor? 
-	 * i kind of played around with the balances just to see if the amounts were being called and written. 
-	 */
-	public CheckingAccount(double openingBalance) {
+
+	CheckingAccount(double openingBalance) {
 		deposit(openingBalance);	
 		futureValue(3);
 	}
@@ -26,6 +28,7 @@ public class CheckingAccount {
 		double interestAmount = this.interestRate;
 		return interestAmount;
 	}
+	
 	public boolean withdraw(double amount) {
 		if(this.balance >= amount) {
 			this.balance = this.balance - amount;
@@ -36,7 +39,6 @@ public class CheckingAccount {
 			}
 	}
 	
-	
 	public boolean deposit(double amount) {
 		if (0 <= amount) {
 			this.balance = this.balance + amount;
@@ -46,23 +48,18 @@ public class CheckingAccount {
 		return false;
 			}	
 	}
+	
 	public double futureValue(int years) {
 		this.futureValue = balance * Math.pow((1+ interestRate ), years);
-		
-		
-		
 		return this.futureValue;
 	}
+	
 	public String toString() {
-		
 		DecimalFormat numberFormat = new DecimalFormat("#.00");
 		String fV = numberFormat.format(this.futureValue);
-		
 		String clientCheckingAccount = "Balance: $" + this.balance +"\n" +
 										"Interest Rate: " +this.interestRate + "\n"+ 
 										"Balance in 3 years: " + fV ;
 		return clientCheckingAccount;
 	}
-	
-	
 }

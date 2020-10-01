@@ -1,6 +1,7 @@
 package com.meritamerica.assignment1;
 
 import java.math.*;
+import java.text.DecimalFormat;
 
 public class SavingsAccount {
 	
@@ -13,12 +14,15 @@ public class SavingsAccount {
 		futureValue(3);
 		toString();
 	}
+	
 	public double getBalance() {
 		return this.balance;
 	}
+	
 	public double getInterestRate() {
 		return this.interestRate;
 	}
+	
 	public boolean withdraw(double amount) {
 		if(this.balance >= amount) {
 			this.balance = this.balance - amount;
@@ -36,17 +40,20 @@ public class SavingsAccount {
 		} 	else {
 			System.out.println("Error found: The amount entered for deposit could not be processed."); // This line will kick in if the amount is negative. so it wont add new balance																						
 			return false;
-			}	
-		
+			}		
 	}
+	
 	public double futureValue(int years) {
 		this.futureValue = balance * Math.pow((1+ interestRate ), 3);
 		return this.futureValue;
 	}
+	
 	public String toString() {
+		DecimalFormat numberFormat = new DecimalFormat("#.00");
+		String fV = numberFormat.format(this.futureValue);
 		String savingsAccount = "Balance: $" + this.balance +"\n" +
 								"Interest Rate: " +this.interestRate + "\n"+ 
-								"Balance in 3 years: " + this.futureValue ;;
+								"Balance in 3 years: " + fV ;;
 		return savingsAccount;
 	}
 }
